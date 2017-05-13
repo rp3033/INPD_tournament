@@ -54,6 +54,7 @@ def registerPlayer(name):
         conn.commit()
         sql ="SELECT id, name FROM players WHERE name = '%s';"%pname
         print "(4) registerPlayer ",sql
+        print "(4) registerPlayer ",sql
         cur.execute(sql)
 	for id, name in cur.fetchall():
 	    print "(5) id, name",id, name
