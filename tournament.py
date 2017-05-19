@@ -189,7 +189,7 @@ def swissPairings():
             player2 = ps[i+1]
                        #  player1 id player1 name,player2 id  player 2 name  
             pairs.append((player1[0], player1[1], player2[0], player2[1]))
-            idx += 2
+            i += 2
 			
         print "pairs = ",pairs
 	return pairs

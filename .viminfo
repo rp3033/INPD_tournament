@@ -17,15 +17,15 @@
 $
 
 # Command Line History (newest to oldest):
-:q
+:wq
 :w
+:q
 :q!
 :w! tournament2.sql
 :w tournament2.sql
 :10
 :w! tournamentBAK.sql
 :w tournamentBAK.sql
-:wq
 :W
 :q!\
 :Q!
@@ -114,21 +114,23 @@ $
 "9	LINE	0
 	--CREATE TABLE match (match integer, winner_id integer,loser_id integer);
 ""-	CHAR	0
-	CREATE
+	x
 
 # File marks:
-'0  16  26  ~/insertm.sql
-'1  26  0  ~/tournament.sql
-'2  71  21  ~/tournament.sql
-'3  84  0  ~/tournament.sql
-'4  7  11  ~/tournament.sql
-'5  9  25  ~/x
-'6  170  0  ~/tournament.py
-'7  167  0  ~/tournament.py
-'8  75  27  ~/tournament.sql
-'9  25  0  ~/tournament.sql
+'0  192  13  ~/tournament.py
+'1  16  26  ~/insertm.sql
+'2  26  0  ~/tournament.sql
+'3  71  21  ~/tournament.sql
+'4  84  0  ~/tournament.sql
+'5  7  11  ~/tournament.sql
+'6  9  25  ~/x
+'7  170  0  ~/tournament.py
+'8  167  0  ~/tournament.py
+'9  75  27  ~/tournament.sql
 
 # Jumplist (newest first):
+-'  192  13  ~/tournament.py
+-'  1  0  ~/tournament.py
 -'  16  26  ~/insertm.sql
 -'  1  0  ~/insertm.sql
 -'  26  0  ~/tournament.sql
@@ -140,7 +142,6 @@ $
 -'  9  25  ~/x
 -'  1  0  ~/x
 -'  170  0  ~/tournament.py
--'  1  0  ~/tournament.py
 -'  167  0  ~/tournament.py
 -'  75  27  ~/tournament.sql
 -'  25  0  ~/tournament.sql
@@ -226,10 +227,114 @@ $
 -'  15  0  ~/tournament.sql
 -'  1  0  ~/tournamentVim2.py
 -'  1  0  ~/tournamentVim.py
--'  6  0  ~/reportMatch.py
--'  1  0  ~/reportMatch.py
 
 # History of marks within files (newest to oldest):
+
+> ~/tournament.py
+	"	192	13
+	^	172	0
+	.	192	13
+	+	83	0
+	+	83	1
+	+	83	27
+	+	83	86
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	91
+	+	83	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	4
+	+	79	0
+	+	79	1
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	96	0
+	+	79	0
+	+	79	3
+	+	84	72
+	+	79	0
+	+	84	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	23
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	71
+	+	79	23
+	+	79	30
+	+	79	11
+	+	79	0
+	+	79	0
+	+	110	0
+	+	112	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	13	0
+	+	4	0
+	+	13	14
+	+	32	0
+	+	110	0
+	+	2	0
+	+	13	14
+	+	14	0
+	+	114	0
+	+	115	1
+	+	114	0
+	+	115	0
+	+	114	0
+	+	114	0
+	+	114	0
+	+	114	50
+	+	115	0
+	+	114	41
+	+	6	19
+	+	7	0
+	+	115	0
+	+	116	0
+	+	117	0
+	+	116	28
+	+	117	0
+	+	119	15
+	+	114	0
+	+	140	0
+	+	141	0
+	+	167	0
+	+	83	0
+	+	98	0
+	+	99	0
+	+	99	0
+	+	100	0
+	+	99	0
+	+	101	0
+	+	101	0
+	+	103	0
+	+	101	92
+	+	131	27
+	+	132	9
+	+	133	63
+	+	134	16
+	+	132	0
+	+	140	0
+	+	141	0
+	+	33	0
+	+	192	13
+	n	68	1
 
 > ~/insertm.sql
 	"	16	26
@@ -383,112 +488,6 @@ $
 
 > /usr/share/vim/vim74/doc/help.txt
 	"	1	0
-
-> ~/tournament.py
-	"	170	0
-	^	172	0
-	.	33	0
-	+	83	0
-	+	83	0
-	+	83	1
-	+	83	27
-	+	83	86
-	+	83	0
-	+	83	0
-	+	83	0
-	+	83	0
-	+	83	0
-	+	83	91
-	+	83	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	4
-	+	79	0
-	+	79	1
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	96	0
-	+	79	0
-	+	79	3
-	+	84	72
-	+	79	0
-	+	84	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	23
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	71
-	+	79	23
-	+	79	30
-	+	79	11
-	+	79	0
-	+	79	0
-	+	110	0
-	+	112	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	13	0
-	+	4	0
-	+	13	14
-	+	32	0
-	+	110	0
-	+	2	0
-	+	13	14
-	+	14	0
-	+	114	0
-	+	115	1
-	+	114	0
-	+	115	0
-	+	114	0
-	+	114	0
-	+	114	0
-	+	114	50
-	+	115	0
-	+	114	41
-	+	6	19
-	+	7	0
-	+	115	0
-	+	116	0
-	+	117	0
-	+	116	28
-	+	117	0
-	+	119	15
-	+	114	0
-	+	140	0
-	+	141	0
-	+	167	0
-	+	83	0
-	+	98	0
-	+	99	0
-	+	99	0
-	+	100	0
-	+	99	0
-	+	101	0
-	+	101	0
-	+	103	0
-	+	101	92
-	+	131	27
-	+	132	9
-	+	133	63
-	+	134	16
-	+	132	0
-	+	140	0
-	+	141	0
-	+	33	0
-	n	68	1
 
 > ~/tournamentBAK.sql
 	"	32	8
