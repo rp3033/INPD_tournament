@@ -1229,3 +1229,101 @@ clear
 vim tournament.sql
 psql
 python
+psql
+vim tournament.sql
+pwds
+Cpwd
+pwd
+clear
+pw
+pwd
+ls
+git init
+apt-get install git
+ls
+pwd
+git init
+cd .git
+ls
+cd ..
+pwd
+git commit
+git commit -m "first commit"
+git remote add origin https://github.com/rp3033/INPD_tournament.git
+git push -u origin master
+git remote add origin https://github.com/rp3033/INPD_tournament.git
+git push -u origin master
+ls
+git add
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/rp3033/INPD_tournament.git
+git push -u origin master
+ls
+ls -l
+rm tournament_code5.py
+git commit
+git status
+git add .
+git add --all
+git status
+git commit
+git commit -m
+git commit -m "added print"
+git status
+git commit
+git add
+git add .
+git commit
+git commit -m "Message"
+git status
+git push
+vim tournament.sql
+python tournament.py
+python
+vim tournament.py
+psql
+python
+\i tournament.sql
+psql
+vim tournament.py
+ls *.sql
+vim tournamentBAK.sql
+vim tournament.sql
+vim tournament.sql
+ls *.tournament.sql
+ls *.sql
+cp tournament.sql tournamentBAK.sql
+rm tounament.sql
+rm tournament.sql
+vim tournament.sql
+rm .tournament.sql.swp
+\i tournament.sql
+psql
+psql
+psql
+sud0 -s
+sudo -s
+psql
+vim tournament.py
+vim tournament.sql
+vim tournament.py
+python
+psql
+python
+ls *.sql
+ls -l *.sql
+man ls
+ls -l -c *.sql
+man ls
+man ls -s -l
+man ls -l: -c
+ls -lc
+ls -l
+ls -lc
+vim tournament.sql
+vim tournament.py
+psal
+psql
+sudo -s
+psql

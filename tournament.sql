@@ -1,30 +1,42 @@
 -- Table definitions for the tournament project.
 -- Put your SQL 'create table' statements in this file; also 'create view'
--- statements if you choose to use it.
--- You can write comments in this file by starting them with two dashes, like
--- these lines here.
 --
 -- Robert Personette 
 --
---CREATE DATABASE tournament and create user root,  Only perform once ;
-DROP DATABASE IF EXISTS tournament;
-CREATE DATABASE tournament;
-\c tournament
+DROP DATABASE IF EXISTS tournament2;
+CREATE DATABASE tournament2;
+\c tournament2
 \d
--- players defines the player's first last name and unique id
-CREATE TABLE player (id serial PRIMARY KEY, name VARCHAR(255));
+-- Stores players name and creates a unique key player ID
+CREATE TABLE player (id serial PRIMARY KEY, name text);
 
--- store each game's match, winners id and loser id 
---CREATE TABLE match (match integer, winner_id integer,loser_id integer);
+-- Store each game's match and who won and who lost 
+CREATE TABLE match (match_id INT, winner_id INT REFERENCES player(id), loser_id INT REFERENCES player(id));
 
-CREATE TABLE match (match_id integer, winner_id int4 REFERENCES player(id), loser_id int4 REFERENCES player(id));
+--Create a View that calculates how many matches, wins and losses each player has
+--- and used in swissParings() to select who plays who
+CREATE OR REPLACE VIEW comp_standings AS
+     SELECT comp.id, comp.name,
+    (SELECT count(*) FROM match WHERE match.winner_id = comp.id) AS wins,
+    (SELECT count(*) FROM match WHERE match.winner_id = comp.id or match.loser_id = comp.id) AS matches
+FROM player as comp
+  GROUP BY id
+  ORDER BY wins DESC,
+           matches ASC;
 
--- store each players statistics 
---CREATE TABLE playerStats (player_id integer, wins integer, matches integer);
+-----------------------------------------------------------------------------
+--Harry's VIEW for playerStandings , used to test against my playerStandings
+CREATE OR REPLACE VIEW current_standings AS
+SELECT  id,
+         name,
+         SUM(CASE WHEN player.id = match.winner_id THEN 1 ELSE 0 END) AS wins,
+         COUNT(match) AS match_count
+FROM player
+LEFT JOIN match
+  ON player.id = match.winner_id OR player.id = match.loser_id
+  GROUP BY id
+  ORDER BY wins DESC,
+           match_count ASC;
 
-CREATE TABLE playerStats (player_id int4 REFERENCES player(id), name VARCHAR(255),matches integer, wins integer);
-
-
---CREATE VIEW myplayerStats AS SELECT * FROM playerStats;
-\d
+\ds
 \dt
