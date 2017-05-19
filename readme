@@ -1,0 +1,31 @@
+Swiss system tournament Final Project 5  Back end programming 
+
+This Git Hub repository https://github.com/rp3033/INPD_tournament has three files:
+
+    Program: tournamnet.py
+    SQL table definition: tournament.sql
+    Test: log > outout of tournament_test.py
+
+
+My virtual enviroment was on Google Cloud 
+https://console.cloud.google.com/compute/instancesDetail/zones/us-east1-b/instances/ubuntu-trusty-1?project=psql-vm&graph=GCE_CPU&duration=PT1H&pli=1
+
+and such there are a lot of instructions for starting up that environment
+	
+:	
+    $ python tournament_test.py
+
+    1. countPlayers() returns 0 after initial deletePlayers() execution.
+    2. countPlayers() returns 1 after one player is registered.
+    3. countPlayers() returns 2 after two players are registered.
+    4. countPlayers() returns zero after registered players are deleted.
+    5. Player records successfully deleted.
+    6. Newly registered players appear in the standings with no matches.
+    7. After a match, players have updated standings.
+    8. After match deletion, player standings are properly reset.
+    9. Matches are properly deleted.
+    10. After one match, players with one win are properly paired.
+    Success!  All tests pass!
+
+
+

@@ -1327,3 +1327,92 @@ psal
 psql
 sudo -s
 psql
+vim tournament.sql[B
+python tournament.py
+[B
+python tournament.py
+177
+python tournament.py
+177
+python tournament.py
+clear
+python tournament.py
+clear
+python tournament.py
+get add
+get status
+git status
+git add
+git add .
+git commit -m “message”
+git push
+vim tournament.py
+git add .
+git commit -m “message”
+git push
+git add .
+git commit -m “message”
+git push
+vim x
+python
+clear
+python
+vim tournament.sql
+clear
+python
+vim insertm.sql
+python
+python tournament.py
+
+python tournament.py
+python tournamentBAK.py
+python tournament.py
+[A
+python tournament.py
+[A
+python tournament.py
+[A
+python tournament.py
+[A
+python tournament.py
+[
+python tournament.py
+
+python tournament.py
+\
+python tournament.py
+[A
+python tournament.py
+[A
+python tournament.py
+d
+python tournament.py
+[
+python tournament.py
+[
+python tournament.py
+python tournament_test.py
+python tournament.py
+python tournament_test.py
+python tournament.py
+python tournamentBAK.py
+lear
+clear
+python tournament.py
+w
+python tournament.py
+[B
+python tournament.py
+
+python tournament.py
+ls -l
+clear
+python tournamentBAK2.py
+[A
+python tournamentBAK2.py
+[B[B
+python tournamentBAK2.py
+rm .tournament.py.swp 
+[B[B
+python tournament.py
+python tournament_test.py

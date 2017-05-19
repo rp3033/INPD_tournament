@@ -1,18 +1,70 @@
 #!/usr/bin/env python
 # tournament.py
 ### Robert Personette   Final Project #5
-###  May 19 2017
 
 import psycopg2
+#include <stdlib.h>
+#include <stdio.h>
+
+#ATE TABLE players CASCADE#
+#    'Himme Lows','William Jones','Estabon Sanchez','Brad Hudson',
+#    'Pit Bull','Steve Bierbussee','Steve Bierbussee','Michael Perse',
+#    'Maureen Ryan','Lisa Moras','Julie Kaplove','Angelica Gertchez',
+#    'Donald Trump','Rex Tillerson'}
 
 
-def registerPlayer(name):
+match = 0
+
+
+def main():
+
+     registerPlayer('Julie Kaplove')
+     registerPlayer('Steve Bierbussee')
+     registerPlayer('Brad Hudson')
+     registerPlayer('Maureen Ryan')
+     registerPlayer('Lisa Moras')
+     registerPlayer('Rex Tillerson')
+     registerPlayer('Donald Trump')
+     registerPlayer('Tom Waits')
+  
+     count =countPlayers()
+     print "count ", count
+
+
+ 
+     conn = psycopg2.connect(dbname="tournament")
+     cur = conn.cursor()
+ 
+     sql ="SELECT * from Player";
+     print "(2) sql ", sql
+     cur.execute(sql)
+     all_rows = cur.fetchall()     
+     print "(3) all rows ",all_rows
+     conn.commit()
+     conn.close()
+
+#    deletePlayers()  
+
+     conn = psycopg2.connect(dbname="tournament")
+     cur = conn.cursor()
+     sql ="SELECT * from Player";
+     print "(4) sql ", sql
+     cur.execute(sql)
+     all_rows = cur.fetchall()     
+     print "(5) all rows ",all_rows
+     conn.commit()
+     conn.close()
+
+
+
+def registerPlayer(name):     
     """Adds a player to the tournament database.
     The database assigns a unique serial id number for the player.  (This
     should be handled by your SQL database schema, not in your Python code.)
     Args:
       name: the player's full name (need not be unique).
     """
+    print "registerPlayer(name)", name	
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
@@ -30,10 +82,11 @@ def registerPlayer(name):
 
 def deleteMatches():		 
     """Remove all the match records from the database. TEST 1"""
+	
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        cur.execute("TRUNCATE TABLE match CASCADE;")     #TRUNCATE -- empty table matchs
+        cur.execute("TRUNCATE TABLE match CASCADE;")     #TRUNCATE -- empty table matchs   
         conn.commit()
         conn.close()
     except Exception as e:
@@ -45,20 +98,22 @@ def deletePlayers():
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        cur.execute("TRUNCATE TABLE player CASCADE;")     #TRUNCATE -- empty table players  
-        conn.commit()
+        cur.execute("TRUNCATE TABLE player CASCADE;")     #TRUNCATE -- empty table players  d
         conn.close()
+        conn.commit()
     except Exception as e:
         print "deletePlayerss: Exception =",e
 
 
 def countPlayers():    
     """Returns the number of players currently registered."""
+    print "countPlayers"
     try:	
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
         cur.execute("SELECT COUNT(*) AS pcount FROM player;")
         pcount = cur.fetchall()[0][0]
+        print "(1) pcount ",pcount
         conn.commit()
         conn.close()
         return pcount
@@ -69,10 +124,12 @@ def countPlayers():
 def reportMatch(winnerID, loserID):
     """Records the outcome of a single match between two players.
     """
+
+    match +=1      #bump to next match
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        sql = ("INSERT INTO match (winner_id,loser_id) VALUES(%s,%s);")  
+        sql = ("INSERT INTO match (winner_id, loser_id) VALUES(%s, %s);")  
         data = (winnerID, loserID)
         cur.execute(sql,data)
         conn.commit()
@@ -92,10 +149,10 @@ def playerStandings():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    try:
+try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        sql ="SELECT * FROM comp_standings;"          #select from view player, wins, matches
+        sql ="SELECT * FROM comp_standings" 
         cur.execute(sql)
         ps = cur.fetchall()
         conn.close()
@@ -104,23 +161,17 @@ def playerStandings():
 	print "playerStandings Exception =",e 
 
 
-def even(x):
-    """test if player count is odd or even  """
-    num = int(x)
-    mod = num % 2
-    if mod > 0:
-       return 1    # odd number
-    else:
-       return 0    # even number	
 
 
-def swissPairings():
+#def swissPairings():
     """Returns a list of pairs of players for the next round of a match.
   
     Assuming that there are an even number of players registered, each player
     appears exactly once in the pairings.  Each player is paired with another
     player with an equal or nearly-equal win record, that is, a player adjacent
     to him or her in the standings.
+  
+    if c
     Returns:
       A list of tuples, each of which contains (id1, name1, id2, name2)
         id1: the first player's unique id
@@ -129,19 +180,16 @@ def swissPairings():
         name2: the second player's name
     """
 
-    i = 0                              #index
-    pairs = []                         #storage to return paired players
-    pcount = countPlayers()            #get number of playrs 		
-    ps = playerStandings()             #get sorted list of players by wins
-    if even(pcount) == 0:              #Even number of players
-        for row in ps:                 #interate thru ordered list of players	
-            player1 = ps[i]            #index first player   
-            player2 = ps[i+1]          #index (paired)second player 
-                       #  player1 id player1 name,player2 id  player 2 name  
-            pairs.append((player1[0], player1[1], player2[0], player2[1])) #write players to pairs[]
-            i+=2                       #increment by two to access player 2 
-	    if (i == pcount):          #0 relative, i=count is end of sorted list, return paired players
-                return pairs
-    else:
-        raise ValueError("Tournament needs even number of players")
+#   try:    
+#       conn = psycopg2.connect(dbname="tournament")
+#       cur = conn.cursor() 
+#       sql = "SELECT playerstats.player_id, playerstats.name,  myplayerstats.player_id, myplayerstats.name FROM playerstats, myplayerstats WHERE playerstats.wins = myplayerstats.wins AND playerstats.player_id <> myplayerstats.player_id;"
 
+#       cur.execute(sql)
+#       tuple = cur.fetchall()
+#       return tuple[0:4]
+#   except Exception as e:
+#       print "swissPairings: Exception =" ,e        
+
+if __name__ == "__main__":
+       main()

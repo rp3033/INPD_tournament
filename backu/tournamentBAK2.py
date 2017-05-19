@@ -1,9 +1,24 @@
 #!/usr/bin/env python
 # tournament.py
 ### Robert Personette   Final Project #5
-###  May 19 2017
 
 import psycopg2
+
+
+def main():
+
+     #registerPlayer('Julie Kaplove')
+     #registerPlayer('Steve Bierbussee')
+     #registerPlayer('Brad Hudson')
+     #registerPlayer('Maureen Ryan')
+     #registerPlayer('Lisa Moras')
+     #registerPlayer('Rex Tillerson')
+     #registerPlayer('Donald Trump')
+     #registerPlayer('Tom Waits')
+  
+     playerStandings()
+     swissPairings()
+     deletePlayers()
 
 
 def registerPlayer(name):
@@ -13,9 +28,11 @@ def registerPlayer(name):
     Args:
       name: the player's full name (need not be unique).
     """
+    print "registerPlayer(name)", name	
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
+        #bname = bleach.clean(name, strip=true)
 	pname = name.replace("'", r"''")  # raw string used her
 
         sql = "INSERT INTO player(name) VALUES (%s);"
@@ -30,6 +47,7 @@ def registerPlayer(name):
 
 def deleteMatches():		 
     """Remove all the match records from the database. TEST 1"""
+	
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
@@ -45,7 +63,7 @@ def deletePlayers():
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        cur.execute("TRUNCATE TABLE player CASCADE;")     #TRUNCATE -- empty table players  
+        cur.execute("TRUNCATE TABLE player CASCADE;")     #TRUNCATE -- empty table players  d
         conn.commit()
         conn.close()
     except Exception as e:
@@ -54,6 +72,7 @@ def deletePlayers():
 
 def countPlayers():    
     """Returns the number of players currently registered."""
+    print "countPlayers"
     try:	
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
@@ -69,6 +88,7 @@ def countPlayers():
 def reportMatch(winnerID, loserID):
     """Records the outcome of a single match between two players.
     """
+
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
@@ -95,9 +115,10 @@ def playerStandings():
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        sql ="SELECT * FROM comp_standings;"          #select from view player, wins, matches
+        sql ="SELECT * FROM comp_standings;"
         cur.execute(sql)
         ps = cur.fetchall()
+        print "ps =",ps
         conn.close()
         return ps
     except Exception as e:
@@ -105,9 +126,11 @@ def playerStandings():
 
 
 def even(x):
-    """test if player count is odd or even  """
+
+    print"x= ",x
     num = int(x)
     mod = num % 2
+    print "mod= ",mod
     if mod > 0:
        return 1    # odd number
     else:
@@ -129,19 +152,29 @@ def swissPairings():
         name2: the second player's name
     """
 
-    i = 0                              #index
-    pairs = []                         #storage to return paired players
-    pcount = countPlayers()            #get number of playrs 		
-    ps = playerStandings()             #get sorted list of players by wins
+    i = 0
+    pairs = []
+    pcount = countPlayers()
+    ps = playerStandings()
+    n = even(pcount)
+    print "n =",n
     if even(pcount) == 0:              #Even number of players
-        for row in ps:                 #interate thru ordered list of players	
-            player1 = ps[i]            #index first player   
-            player2 = ps[i+1]          #index (paired)second player 
+        for row in ps:
+            print "row =",row
+            print "ps[",i,"]",ps[i] 
+            player1 = ps[i]
+            player2 = ps[i+1]
                        #  player1 id player1 name,player2 id  player 2 name  
-            pairs.append((player1[0], player1[1], player2[0], player2[1])) #write players to pairs[]
-            i+=2                       #increment by two to access player 2 
-	    if (i == pcount):          #0 relative, i=count is end of sorted list, return paired players
+            pairs.append((player1[0], player1[1], player2[0], player2[1]))
+            print "pairs=",pairs
+            i+=2
+	    if (i == pcount):
+                print "pairs = ",pairs
                 return pairs
     else:
-        raise ValueError("Tournament needs even number of players")
+        #raise ValueError("Tournament needs even number of players")
+        print "Tournament needs even number of players"
+
+if __name__ == "__main__":
+       main()
 
