@@ -1416,3 +1416,154 @@ rm .tournament.py.swp
 [B[B
 python tournament.py
 python tournament_test.py
+vim tournament.py
+ls *.py
+ls -l *.py
+ls -l tournament*.py
+vim tournament99.py
+vim tournament.py
+vim tournamentBAK.py
+vim tournament.py
+vim tournament518.py
+vim tournament.py
+vim readme
+mkdir submit
+cp readme /submit
+cp tournament.sql /submit
+cp tournament.py /submit
+mkdie backup
+mkdir backup
+cd backup
+ls -l
+cd ..
+cp *.* /backup
+mkdir backup
+cp * /backup
+mkdir backu
+cp * /backu
+cp * /backu/.
+cp * backu/.
+cd backup
+cd backu
+cd ..
+cd backu
+ls -l
+cd submit
+cd ..
+cd submit
+ls -l
+cd ..
+cp readme /submit
+cp tournament.sql /submit
+cd submit
+ls -l
+cd ..
+ls -lSwiss system tournament Final Project 5  Back end programming 
+This Git Hub repository https://github.com/rp3033/INPD_tournament has three files:
+My virtual enviroment was on Google Cloud 
+https://console.cloud.google.com/compute/instancesDetail/zones/us-east1-b/instances/ubuntu-trusty-1?project=psql-vm&graph=GCE_CPU&duration=PT1H&pli=1
+and such there are a lot of instructions for starting up that environment
+:
+ls -l
+cp readme submit/.
+cd submit
+ls -l
+cp tournament.py submit/.
+cd ..
+ls -l tournament.py
+vi tournament.py
+cp tournament.py submit/.
+cp tournament.sql submit/.
+cd submit
+ls -l
+cd ..
+cp tournament_test.py submit/.
+cd submit
+ls -l
+cd ..
+mkdir t2
+cp tournament_test.py t2/.
+cp tournament.sql t2/.
+cp tournament.py t2/.
+cd t2
+ls -l
+cd ..
+cp readme t2/.
+cd readme
+ls -l
+cd t2
+ls -l
+cd ..
+rm *.sql
+ls
+rm *,py
+rm *.py
+ls -l
+rm d
+cd *.save
+rm me
+cp log submit/.
+cp log t2/.
+cd t2
+ls -l
+cd ,,
+cd ..
+cd submit
+ls -l
+d ..
+cd ..
+ls -l
+rm *.pyc
+ls
+ls -l
+rm inser*
+rm nam*
+rm q
+ls -l
+rm log
+rm nano*
+rm *.PY
+rm *.save*
+ls -l
+rm readme
+rm *.txt
+ls -l
+cd submit
+cp * ../
+cd ..
+ls -l
+git status
+git add
+git add .
+git push
+git status
+git push
+git add
+git add .
+git push
+git add .
+git push
+ls -l
+python tournament.py
+python tournament_test.py
+rm .tournament.py.swp 
+python tournament_test.py
+python tournament_test.py > log
+cat log
+python tournament_test.py
+python tournament_test.py > log
+python tournament_test.py
+psql
+vim tournament_test.py
+python
+vim tournament_test.py
+python
+vim tournamentBAK2.py
+cp tournamentBAK2.py tournamentBAK3.py 
+vim tournamentBAK2.py
+vim tournament.py
+vim tournamentBAK2.py
+ls -l
+cp tournament.py tournamentBAK.py
+vim tournament.py
+python tournament_test.py

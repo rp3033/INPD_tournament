@@ -17,10 +17,29 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
 :w
 :q!
+:q
+:108
+:104
+:112
+:98
+:86
+:81
+:75
+:77
+:66
+:55
+:52
+:48
+:40
+:36
+:31
+:28
+:26
+:21
+:3
 :W
 :w! tournamentBAK2.PY
 :w! tournamentBAK.PY
@@ -38,7 +57,6 @@ $
 :25
 :24
 :197
-:40
 :212
 :w! tournament2.sql
 :w tournament2.sql
@@ -49,24 +67,6 @@ $
 :w! tournament.sql
 :w tournament.sql
 :38
-:w! tournamentNEW.sql
-:e
-:93
-:w tournament.py
-:w tournamentBACKUP.py
-:68
-:33
-:109
-:155
-:w tournament_id.sql
-:yy
-:!q
-:Q
-:s/players
-:142
-:w! tournamentWORKING.py
-:w tournament12.py
-:w! tournament11.py
 
 # Search String History (newest to oldest):
 ? \<sql\>
@@ -95,59 +95,60 @@ $
 # Registers:
 "0	LINE	0
 	    print "deleteMatches"
-""1	LINE	0
+"1	LINE	0
 	
 "2	LINE	0
-	#       main()
+	
 "3	LINE	0
-	#if __name__ == "__main__":
+	        #print "ps =",ps
 "4	LINE	0
-	        print "Tournament needs even number of players"
+	    print "countPlayers"
 "5	LINE	0
-	    n = even(pcount)
+	    print "mod= ",mod
 "6	LINE	0
-	    print "registerPlayer(name)", name	
+	    print"x= ",x
 "7	LINE	0
-	                print "pairs = ",pairs
+	
 "8	LINE	0
-	            print "pairs=",pairs
+	dd	
 "9	LINE	0
-	            print "ps[",i,"]",ps[i] 
-"-	CHAR	0
-	,
+	        #bname = bleach.clean(name, strip=true)
+""-	CHAR	0
+	#
 
 # File marks:
-'0  1  0  ~/tournament.py
-'1  29  0  ~/readme
-'2  4  15  ~/tournament.py
-'3  133  8  ~/tournament.py
-'4  109  4  ~/tournament.py
-'5  8  4  ~/tournament.py
-'6  8  0  ~/tournament.py
-'7  96  16  ~/tournamentBAK2.py
-'8  33  49  ~/tournamentBAK2.py
-'9  7  0  ~/tournamentBAK2.py
+'0  7  0  ~/tournament.py
+'1  10  95  ~/readme
+'2  26  44  ~/tournament.py
+'3  108  4  ~/tournament.py
+'4  104  0  ~/tournamentBAK2.py
+'5  131  8  ~/tournament.py
+'6  107  4  ~/tournament.py
+'7  7  0  ~/tournament.py
+'8  1  0  ~/tournament.py
+'9  96  16  ~/tournamentBAK2.py
 
 # Jumplist (newest first):
+-'  7  0  ~/tournament.py
 -'  1  0  ~/tournament.py
--'  29  0  ~/readme
+-'  10  95  ~/readme
 -'  1  0  ~/readme
--'  4  15  ~/tournament.py
--'  133  8  ~/tournament.py
--'  109  4  ~/tournament.py
--'  8  4  ~/tournament.py
--'  96  16  ~/tournamentBAK2.py
+-'  26  44  ~/tournament.py
+-'  108  4  ~/tournament.py
+-'  104  0  ~/tournamentBAK2.py
 -'  1  0  ~/tournamentBAK2.py
+-'  131  8  ~/tournament.py
+-'  107  4  ~/tournament.py
+-'  96  16  ~/tournamentBAK2.py
 -'  33  49  ~/tournamentBAK2.py
 -'  7  0  ~/tournamentBAK2.py
--'  14  8  ~/tournament.py
--'  21  0  ~/tournament.py
+-'  13  8  ~/tournament.py
+-'  20  0  ~/tournament.py
 -'  19  74  ~/tournament.py
--'  110  4  ~/tournament.py
 -'  195  0  ~/tournament99.py
 -'  1  0  ~/tournament99.py
--'  118  8  ~/tournament.py
--'  114  13  ~/tournament.py
+-'  116  8  ~/tournament.py
+-'  112  13  ~/tournament.py
 -'  16  26  ~/insertm.sql
 -'  1  0  ~/insertm.sql
 -'  26  0  ~/tournament.sql
@@ -158,44 +159,44 @@ $
 -'  7  11  ~/tournament.sql
 -'  9  25  ~/x
 -'  1  0  ~/x
--'  99  0  ~/tournament.py
 -'  97  0  ~/tournament.py
+-'  95  0  ~/tournament.py
 -'  75  27  ~/tournament.sql
 -'  25  0  ~/tournament.sql
 -'  27  1  ~/tournament.sql
 -'  28  0  ~/tournament.sql
 -'  32  8  ~/tournamentBAK.sql
 -'  1  0  ~/tournamentBAK.sql
--'  100  0  ~/tournament.py
--'  63  8  ~/tournament.py
--'  47  26  ~/tournament.py
+-'  98  0  ~/tournament.py
+-'  61  8  ~/tournament.py
+-'  45  26  ~/tournament.py
 -'  24  33  ~/tournament.sql
 -'  23  35  ~/tournament.sql
 -'  18  0  ~/tournament.py
 -'  1  0  ~/tournament.txt
--'  57  16  ~/tournament.py
--'  59  15  ~/tournament.py
--'  12  41  ~/tournament.py
+-'  55  16  ~/tournament.py
+-'  57  15  ~/tournament.py
+-'  11  41  ~/tournament.py
 -'  1  0  ~/tournament2.sql
 -'  3  39  ~/tournament.py
 -'  138  0  ~/tournament.py
--'  44  8  ~/tournament.py
+-'  42  8  ~/tournament.py
 -'  139  12  ~/tournament_test.py
 -'  1  0  ~/tournament_test.py
 -'  93  28  ~/tournament_test.py
 -'  92  4  ~/tournament_test.py
--'  64  12  ~/tournament.py
--'  9  32  ~/tournament.py
+-'  62  12  ~/tournament.py
+-'  8  32  ~/tournament.py
 -'  9  14  ~/tournament_test.py
 -'  1  0  ~/test_tournament.py
--'  101  8  ~/tournament.py
--'  41  8  ~/tournament.py
--'  102  11  ~/tournament.py
+-'  99  8  ~/tournament.py
+-'  39  8  ~/tournament.py
+-'  100  11  ~/tournament.py
 -'  4  31  ~/up.sql
 -'  1  0  ~/up.sql
--'  112  0  ~/tournament.py
--'  62  68  ~/tournament.py
--'  33  15  ~/tournament.py
+-'  110  0  ~/tournament.py
+-'  60  68  ~/tournament.py
+-'  31  15  ~/tournament.py
 -'  18  0  ~/tournament2.py
 -'  1  0  ~/tournament2.py
 -'  6  0  ~/tournament2.py
@@ -215,7 +216,7 @@ $
 -'  1  0  ~/ds.sql
 -'  1  0  ~/dt.sql
 -'  15  54  ~/tournament2.py
--'  5  0  ~/tournament.py
+-'  4  0  ~/tournament.py
 -'  1  0  ~/insert.py
 -'  39  12  ~/tournament2.py
 -'  1  0  ~/boot_tourn.sql
@@ -225,38 +226,13 @@ $
 -'  1  0  ~/tdrop.sql
 -'  1  0  ~/insert.sql
 -'  4  0  ~/boot_tourn.py
--'  11  4  ~/tournament.py
 
 # History of marks within files (newest to oldest):
 
 > ~/tournament.py
-	"	1	0
-	^	4	16
-	.	4	15
-	+	33	0
-	+	33	3
-	+	33	0
-	+	19	24
-	+	22	27
-	+	22	8
-	+	22	7
-	+	34	0
-	+	22	0
-	+	8	0
-	+	8	4
-	+	8	10
-	+	9	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	16	0
-	+	17	0
-	+	17	0
-	+	17	0
+	"	7	0
+	^	7	10
+	.	7	0
 	+	9	0
 	+	11	0
 	+	12	0
@@ -267,27 +243,27 @@ $
 	+	16	0
 	+	16	0
 	+	18	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	31	0
-	+	29	44
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	29	0
+	+	27	44
 	+	19	0
-	+	29	27
+	+	27	27
 	+	8	4
 	+	8	3
 	+	8	18
-	+	31	0
-	+	27	0
-	+	26	0
-	+	27	0
-	+	22	0
+	+	29	0
+	+	25	0
+	+	24	0
+	+	25	0
+	+	21	0
 	+	19	4
 	+	8	0
 	+	9	24
@@ -300,52 +276,75 @@ $
 	+	8	0
 	+	8	0
 	+	19	0
-	+	33	0
-	+	72	0
-	+	101	8
+	+	31	0
+	+	70	0
+	+	99	8
+	+	108	0
 	+	110	0
-	+	112	0
-	+	109	0
-	+	57	0
-	+	101	0
-	+	148	0
-	+	148	0
+	+	107	0
+	+	55	0
+	+	99	0
+	+	146	0
+	+	146	0
+	+	134	0
 	+	136	0
-	+	138	0
+	+	140	0
 	+	142	0
-	+	144	0
 	+	16	0
-	+	136	0
-	+	108	42
-	+	132	44
-	+	133	71
-	+	134	58
-	+	135	73
-	+	137	76
-	+	138	57
-	+	139	46
-	+	141	99
-	+	142	74
-	+	143	96
-	+	146	8
-	+	147	0
-	+	148	0
-	+	98	92
-	+	48	92
+	+	134	0
+	+	106	42
+	+	130	44
+	+	131	71
+	+	132	58
+	+	133	73
+	+	135	76
+	+	136	57
+	+	137	46
+	+	139	99
+	+	140	74
+	+	141	96
+	+	144	8
+	+	145	0
+	+	146	0
+	+	96	92
+	+	46	92
 	+	4	15
+	+	3	0
+	+	4	22
+	+	34	52
+	+	46	53
+	+	38	43
+	+	26	45
+	+	50	44
+	+	75	24
+	+	23	0
+	+	20	0
+	+	19	64
+	+	64	42
+	+	73	71
+	+	79	42
+	+	102	37
+	+	132	60
+	+	135	76
+	+	136	58
+	+	137	67
+	+	138	75
+	+	140	75
+	+	104	0
+	+	26	45
+	+	7	0
 
 > ~/readme
-	"	29	0
-	^	29	0
-	.	28	29
+	"	10	95
+	^	10	96
+	.	10	95
 	+	30	0
 	+	28	29
-
-> ~/tournament518.py
-	"	121	0
+	+	11	0
+	+	10	95
 
 > ~/tournamentBAK2.py
-	"	96	16
+	"	104	0
 	^	160	17
 	.	96	16
 	+	7	0
@@ -394,6 +393,9 @@ $
 	+	160	16
 	+	81	0
 	+	96	16
+
+> ~/tournament518.py
+	"	121	0
 
 > ~/tournamentBAK.py
 	"	194	0

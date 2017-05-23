@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # tournament.py
-# Robert Personette   Final Project #5
-#  May 19 2017    v 1.3
+### Robert Personette   Final Project #5
+###  May 19 2017
 
 import psycopg2
 
@@ -16,14 +16,16 @@ def registerPlayer(name):
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-	pname = name.replace("'", r"''")  #Find any quotes and reformate
+	pname = name.replace("'", r"''")  # raw string used her
+
         sql = "INSERT INTO player(name) VALUES (%s);"
         data = (pname, )
         cur.execute(sql,data)
+
         conn.commit()
         conn.close()      
     except Exception as e:
-        print "registerPlayer : Exception =", e
+        print "registerPlayer : Exception =",e
 
 
 def deleteMatches():		 
@@ -31,11 +33,11 @@ def deleteMatches():
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        cur.execute("TRUNCATE TABLE match CASCADE;") 
+        cur.execute("TRUNCATE TABLE match CASCADE;")     #TRUNCATE -- empty table matchs
         conn.commit()
         conn.close()
     except Exception as e:
-        print "deleteMatches: Exception =", e
+        print "deleteMatches: Exception =",e
 
 
 def deletePlayers():  
@@ -43,11 +45,11 @@ def deletePlayers():
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        cur.execute("TRUNCATE TABLE player CASCADE;") 
+        cur.execute("TRUNCATE TABLE player CASCADE;")     #TRUNCATE -- empty table players  
         conn.commit()
         conn.close()
     except Exception as e:
-        print "deletePlayerss: Exception =", e
+        print "deletePlayerss: Exception =",e
 
 
 def countPlayers():    
@@ -61,7 +63,7 @@ def countPlayers():
         conn.close()
         return pcount
     except Exception as e:
-        print "countPlayers: Exception =", e
+        print "countPlayers: Exception =",e
 
 
 def reportMatch(winnerID, loserID):
@@ -70,13 +72,13 @@ def reportMatch(winnerID, loserID):
     try:
         conn = psycopg2.connect(dbname="tournament")
         cur = conn.cursor()
-        sql = ("INSERT INTO match (winner_id,loser_id) VALUES(%s,%s);")
+        sql = ("INSERT INTO match (winner_id,loser_id) VALUES(%s,%s);")  
         data = (winnerID, loserID)
-        cur.execute(sql, data)
+        cur.execute(sql,data)
         conn.commit()
         conn.close()
     except Exception as e:
-        print "reportMatch: Exception =", e
+        print "reportMatch: Exception =",e 
 
 
 def playerStandings():
@@ -99,7 +101,7 @@ def playerStandings():
         conn.close()
         return ps
     except Exception as e:
-	print "playerStandings Exception =", e 
+	print "playerStandings Exception =",e 
 
 
 def even(x):
@@ -129,15 +131,15 @@ def swissPairings():
 
     i = 0                              #index
     pairs = []                         #storage to return paired players
-    pcount = countPlayers()            #get number of playrs
+    pcount = countPlayers()            #get number of playrs 		
     ps = playerStandings()             #get sorted list of players by wins
     if even(pcount) == 0:              #Even number of players
-        for row in ps:                 #interate thru ordered list of players
-            player1 = ps[i]            #index first player
-            player2 = ps[i+1]          #index (paired)second player
-                       #  player1 id player1 name,player2 id  player 2 name
+        for row in ps:                 #interate thru ordered list of players	
+            player1 = ps[i]            #index first player   
+            player2 = ps[i+1]          #index (paired)second player 
+                       #  player1 id player1 name,player2 id  player 2 name  
             pairs.append((player1[0], player1[1], player2[0], player2[1])) #write players to pairs[]
-            i+=2                       #increment by two to access player 2
+            i+=2                       #increment by two to access player 2 
 	    if (i == pcount):          #0 relative, i=count is end of sorted list, return paired players
                 return pairs
     else:
