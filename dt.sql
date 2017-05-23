@@ -1,2 +1,0 @@
-\d match
-\d player
