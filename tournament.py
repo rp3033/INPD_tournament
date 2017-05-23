@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # tournament.py
 # Robert Personette   Final Project #5
-#  May 19 2017    v 1.3
+#  May 23 2017    v 1.3
+
 
 import psycopg2
 

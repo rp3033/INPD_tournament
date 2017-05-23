@@ -1,4 +1,7 @@
-Swiss system tournament Final Project 5  Back end programming 
+Swiss system tournament Final Project 5 Back end programming 
+
+Robert Personette
+5/23/17
 
 This Git Hub repository https://github.com/rp3033/INPD_tournament has three files:
 
@@ -7,13 +10,13 @@ This Git Hub repository https://github.com/rp3033/INPD_tournament has three file
     Test: log > outout of tournament_test.py
 
 
-My virtual enviroment was on Google Cloud 
+1. My virtual enviroment was on Google Cloud 
 https://console.cloud.google.com/compute/instancesDetail/zones/us-east1-b/instances/ubuntu-trusty-1?project=psql-vm&graph=GCE_CPU&duration=PT1H&pli=1
+2. Click on Start
+3. Click on SSH -> than open in browser window
+4. enter sudo -s
+5. vim tournament.py
 
-and such there are a lot of instructions for starting up that environment
-	
-:	
-    $ python tournament_test.py
 
     1. countPlayers() returns 0 after initial deletePlayers() execution.
     2. countPlayers() returns 1 after one player is registered.
