@@ -17,9 +17,9 @@
 $
 
 # Command Line History (newest to oldest):
+:wq
 :q
 :w
-:wq
 :q!
 :108
 :104
@@ -117,20 +117,21 @@ $
 	 
 
 # File marks:
-'0  7  0  ~/readme
-'1  5  0  ~/tournament.py
-'2  8  0  ~/tournament.py
-'3  13  95  ~/readme
-'4  27  44  ~/tournament.py
-'5  109  4  ~/tournament.py
-'6  104  0  ~/tournamentBAK2.py
-'7  132  8  ~/tournament.py
-'8  108  4  ~/tournament.py
-'9  8  0  ~/tournament.py
+'0  20  19  ~/readme
+'1  7  0  ~/readme
+'2  5  0  ~/tournament.py
+'3  8  0  ~/tournament.py
+'4  13  95  ~/readme
+'5  27  44  ~/tournament.py
+'6  109  4  ~/tournament.py
+'7  104  0  ~/tournamentBAK2.py
+'8  132  8  ~/tournament.py
+'9  108  4  ~/tournament.py
 
 # Jumplist (newest first):
--'  7  0  ~/readme
+-'  20  19  ~/readme
 -'  1  0  ~/readme
+-'  7  0  ~/readme
 -'  5  0  ~/tournament.py
 -'  1  0  ~/tournament.py
 -'  8  0  ~/tournament.py
@@ -226,27 +227,28 @@ $
 -'  8  32  ~/tournament.sql
 -'  54  3  ~/tournament2.py
 -'  1  0  ~/tdrop.sql
--'  1  0  ~/insert.sql
 
 # History of marks within files (newest to oldest):
 
 > ~/readme
-	"	7	0
-	^	7	0
-	.	4	6
+	"	20	19
+	^	20	20
+	.	21	0
 	+	33	0
 	+	31	29
 	+	14	0
 	+	13	95
 	+	13	2
-	+	20	0
+	+	20	20
 	+	19	0
 	+	17	16
 	+	18	19
-	+	20	0
+	+	20	20
 	+	1	39
 	+	3	17
 	+	4	6
+	+	19	34
+	+	21	0
 
 > ~/tournament.py
 	"	5	0

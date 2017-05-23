@@ -16,8 +16,8 @@ https://console.cloud.google.com/compute/instancesDetail/zones/us-east1-b/instan
 3. Click on SSH -> than open in browser window
 4. enter sudo -s
 5. vim tournament.py
-
-
+6. enter python tournament_test.py
+7. View output below
     1. countPlayers() returns 0 after initial deletePlayers() execution.
     2. countPlayers() returns 1 after one player is registered.
     3. countPlayers() returns 2 after two players are registered.
